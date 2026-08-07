@@ -164,14 +164,23 @@ h4 {
 
 .team-grid {
   display: grid;
-  grid-template-columns: 2fr 1.2fr 220px;
+  grid-template-columns: 220px 1fr;
   gap: 2rem;
-  align-items: start;
+  align-items: center;
+}
+
+.team-info {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 1rem;
 }
 
 .team-photo img {
+  width: 220px;
+  height: auto;
   border-radius: 12px;
 }
+
 
 
 .pub-item {
@@ -364,4 +373,15 @@ h4 {
 /* Homepage title size */
 #title-block-header h1 {
     font-size: 38px !important;
+}
+
+.link-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.link-row p {
+  margin: 0;
 }
