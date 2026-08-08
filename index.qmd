@@ -1,13 +1,9 @@
 ---
-title: "Welcome to Chang Group at Westlake"
-image: images/site-logo.
-about:
-  id: hero-heading
-  template: jolla
-  image-width: 24em
-  image-shape: rectangle
+title: "Welcome to Li Chang Group at Westlake"
 
 ---
+
+![](images/westlake1.png){.homepage-hero}
 
 ::: {#hero-heading}
 

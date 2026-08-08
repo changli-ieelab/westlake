@@ -366,10 +366,6 @@ h3, h4 {
   }
 }
 
-/* Homepage title size */
-#title-block-header h1 {
-    font-size: 38px !important;
-}
 
 .link-row {
   display: flex;
@@ -426,4 +422,45 @@ h3, h4 {
 #TOC a.active {
   color: #0066cc !important;
   border-left-color: #0066cc !important;
+}
+
+/* Homepage hero image */
+.homepage-hero {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+
+  height: 360px;
+  object-fit: cover;
+  object-position: center;
+
+  margin: 0 auto 2rem auto;
+  border-radius: 12px;
+}
+
+
+/* Homepage title - prevent overflow */
+#title-block-header {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#title-block-header h1 {
+  font-size: clamp(40px, 3vw, 56px) !important;
+  line-height: 1.08 !important;
+  white-space: normal !important;
+
+  width: 100% !important;
+  max-width: 100% !important;
+
+  margin-bottom: 1.4rem !important;
+}
+
+@media (max-width: 768px) {
+  #title-block-header h1 {
+    font-size: 36px !important;
+    line-height: 1.12 !important;
+  }
 }
