@@ -622,8 +622,8 @@ body.nav-fixed {
 
 .poster-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
   align-items: start;
   margin-top: 1.5rem;
   margin-bottom: 3rem;
@@ -659,13 +659,13 @@ body.nav-fixed {
 }
 
 /* Mobile */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .poster-gallery {
     grid-template-columns: 1fr;
   }
 
   .poster-card {
-    max-width: 420px;
+    max-width: 450px;
     margin-left: auto;
     margin-right: auto;
   }
