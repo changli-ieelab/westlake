@@ -8,6 +8,7 @@ project:
 website:
   page-navigation: true
   title: "Interfacial Electrochemical Engineering Lab"
+  google-analytics: "G-5TPCGR6ZQC"
   site-url: https://changli-ieelab.github.io/westlake
   favicon: images/site-logo.jpg
 
