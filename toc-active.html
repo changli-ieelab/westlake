@@ -5,16 +5,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
   tocLinks.forEach(link => {
     const href = link.getAttribute("href");
+
     if (href && href.startsWith("#")) {
       const section = document.querySelector(href);
+
       if (section) {
         sections.push({
           link: link,
           section: section
         });
       }
+
+      // 点击 TOC 后，把目标标题放到页面约 30% 高度处
+      link.addEventListener("click", function (e) {
+        const target = document.querySelector(href);
+
+        if (!target) return;
+
+        e.preventDefault();
+
+        const targetY =
+          target.getBoundingClientRect().top +
+          window.scrollY -
+          window.innerHeight * 0.30;
+
+        window.scrollTo({
+          top: targetY,
+          behavior: "smooth"
+        });
+
+        // 更新网址中的 #section
+        history.replaceState(null, "", href);
+      });
     }
   });
+
 
   function updateTOC() {
     let current = null;
@@ -36,7 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+
   window.addEventListener("scroll", updateTOC);
+
   updateTOC();
 });
 </script>

@@ -465,9 +465,20 @@ h3, h4 {
   }
 }
 
-/* Journal name */
-.journal-name {
-  color: #3B6E8F;
-  font-style: italic;
-  font-weight: normal;
+/* Disable navbar auto-popup while scrolling */
+#quarto-header {
+  position: static !important;
+  transform: none !important;
+}
+
+#quarto-header.headroom,
+#quarto-header.headroom--pinned,
+#quarto-header.headroom--unpinned {
+  position: static !important;
+  transform: none !important;
+}
+
+/* Remove the blank space reserved for a fixed navbar */
+body.nav-fixed {
+  padding-top: 0 !important;
 }
