@@ -701,3 +701,33 @@ body.nav-fixed {
 html {
   scroll-behavior: auto !important;
 }
+
+.seminar-list {
+  margin-top: 1.4rem;
+}
+
+.seminar-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  column-gap: 0.8rem;
+  margin-bottom: 1.6rem;
+  align-items: start;
+}
+
+.seminar-year {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.seminar-info {
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .seminar-item {
+    grid-template-columns: 65px 1fr;
+    column-gap: 0.5rem;
+  }
+}

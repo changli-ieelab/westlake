@@ -157,15 +157,32 @@ Yangyang Huang, Xiang Li,, Jinsong Wang, Lin Miao, **Chang Li**, Jiantao Han📧
 :::
 ::::
 
-## Seminar Presentations
+## Oral Presentations
 
-:::: pub-item
-<a href="publications/SeminarPresentations/20231127_MRS 2023 Fall_Final.pdf" target="_blank"> <img src="publications/SeminarPresentations/20231127_MRS 2023 Fall_Final_cover.jpg" class="pub-cover"/> </a>
+<div class="seminar-list">
 
-::: pub-text
-<strong> Chang Li </strong><br> *Electrode/Electrolyte Interface Control for Multivalent-Ion Batteries with High Stability and Reversibility* <br> **Materials Research Society (MRS) Fall Meeting 2023**, Boston, Nov. 27th, 2023
-:::
-::::
+<div class="seminar-item">
+<div class="seminar-year">2026</div>
+<div class="seminar-info">
+<em>“Crystalline Sodium Superionic Conductor with a New Halide Framework”</em> – <strong>Chang Li</strong> – Materials Research Society (MRS) Spring Meeting, Hawaiʻi
+</div>
+</div>
+
+<div class="seminar-item">
+<div class="seminar-year">2023</div>
+<div class="seminar-info">
+<em>“Electrode/Electrolyte Interface Control for Multivalent-Ion Batteries with High Stability and Reversibility”</em> – <strong>Chang Li</strong> – Materials Research Society (MRS) Fall Meeting, Boston
+</div>
+</div>
+
+<div class="seminar-item">
+<div class="seminar-year">2021</div>
+<div class="seminar-info">
+<em>“Tuning the Solvation Structure in Aqueous Zinc Batteries to Maximize Zn-Ion Intercalation and Optimize Dendrite-Free Zinc Plating”</em> – <strong>Chang Li</strong> – Canadian Chemical Engineering Conference (CCEC), Montréal
+</div>
+</div>
+
+</div>
 
 ## Poster Presentations
 
@@ -178,8 +195,8 @@ Yangyang Huang, Xiang Li,, Jinsong Wang, Lin Miao, **Chang Li**, Jiantao Han📧
 </a>
 
 <div class="poster-caption">
-<strong>JCESR 2023 Annual Meeting</strong><br>
-Electrolyte & Interfacial Chemistry
+<strong>Chang Li, JCESR 2023 Annual Meeting</strong><br>
+Zn Electrolyte & Interfacial Electrochemistry
 </div>
 :::
 
@@ -190,8 +207,8 @@ Electrolyte & Interfacial Chemistry
 </a>
 
 <div class="poster-caption">
-<strong>IMLB 2024</strong><br>
-Multivalent Battery Electrochemistry
+<strong>Chang Li, IMLB 2024</strong><br>
+Mg Electrolyte & Interfacial Electrochemistry
 </div>
 
 :::
