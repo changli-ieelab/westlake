@@ -287,6 +287,7 @@ ul.task-list li input[type="checkbox"] {
 </main> <!-- /main -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+
   const tocLinks = document.querySelectorAll("#TOC a");
   const sections = [];
 
@@ -302,30 +303,40 @@ document.addEventListener("DOMContentLoaded", function () {
           section: section
         });
       }
-
-      // 点击 TOC 后，把目标标题放到页面约 30% 高度处
-      link.addEventListener("click", function (e) {
-        const target = document.querySelector(href);
-
-        if (!target) return;
-
-        e.preventDefault();
-
-        const targetY =
-          target.getBoundingClientRect().top +
-          window.scrollY -
-          window.innerHeight * 0.30;
-
-        window.scrollTo({
-          top: targetY,
-          behavior: "smooth"
-        });
-
-        // 更新网址中的 #section
-        history.replaceState(null, "", href);
-      });
     }
   });
+
+
+  // Custom TOC click positioning
+  document.addEventListener("click", function (e) {
+
+    const link = e.target.closest('#TOC a[href^="#"]');
+
+    if (!link) return;
+
+    const href = link.getAttribute("href");
+    const target = document.querySelector(href);
+
+    if (!target) return;
+
+    // Prevent Quarto's own TOC scrolling
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+
+    const targetY =
+      target.getBoundingClientRect().top +
+      window.scrollY -
+      window.innerHeight * 0.30;
+
+    window.scrollTo({
+      top: targetY,
+      behavior: "smooth"
+    });
+
+    history.replaceState(null, "", href);
+
+  }, true);
 
 
   function updateTOC() {
@@ -350,10 +361,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   window.addEventListener("scroll", updateTOC);
+  updateTOC();
 
-  updateTOC();  
 
-    // Add "Back to top" link below TOC
+  // Back to top
   const toc = document.querySelector("#TOC");
 
   if (toc) {
@@ -374,21 +385,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
     toc.appendChild(backToTop);
   }
-  
-  // Add sidebar logos
-const marginSidebar = document.querySelector("#quarto-margin-sidebar");
 
-if (marginSidebar) {
-  const logoBox = document.createElement("div");
-  logoBox.className = "sidebar-logos";
 
-  logoBox.innerHTML = `
-    <img class="chang-logo" src="images/site-logo.jpg" alt="Chang Group">
-    <img class="westlake-logo" src="images/westlake-logo.png" alt="Westlake University">
-  `;
+  // Sidebar logos
+  const marginSidebar = document.querySelector("#quarto-margin-sidebar");
 
-  marginSidebar.appendChild(logoBox);
-}
+  if (marginSidebar) {
+    const logoBox = document.createElement("div");
+    logoBox.className = "sidebar-logos";
+
+    logoBox.innerHTML = `
+      <img class="chang-logo"
+           src="images/site-logo.jpg"
+           alt="Chang Group">
+
+      <img class="westlake-logo"
+           src="images/westlake-logo.png"
+           alt="Westlake University">
+    `;
+
+    marginSidebar.appendChild(logoBox);
+  }
+
 });
 </script>
 <script id="quarto-html-after-body" type="application/javascript">
