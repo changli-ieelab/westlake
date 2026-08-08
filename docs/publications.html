@@ -339,30 +339,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   tocLinks.forEach(link => {
-
     const href = link.getAttribute("href");
 
-    if (!href) return;
+    if (!href || !href.startsWith("#")) return;
 
     const target = document.querySelector(href);
 
     if (!target) return;
 
-
-    sections.push({
-      link: link,
-      section: target
-    });
-
-
-    /*
-     * Our own TOC click behavior
-     */
     link.addEventListener("click", function (e) {
-
       e.preventDefault();
-      e.stopPropagation();
-      e.stopImmediatePropagation();
 
       const targetY =
         target.getBoundingClientRect().top +
@@ -371,14 +357,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       window.scrollTo({
         top: targetY,
-        behavior: "smooth"
+        behavior: "auto"
       });
 
       history.replaceState(null, "", href);
-
     });
-
-  });
+});
 
 
   /*

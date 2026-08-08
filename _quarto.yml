@@ -39,4 +39,5 @@ format:
     toc: true
     toc-location: right
     toc-depth: 3
+    smooth-scroll: false
     include-after-body: toc-active.html
