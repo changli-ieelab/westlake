@@ -176,6 +176,11 @@ Yangyang Huang, Xiang Li,, Jinsong Wang, Lin Miao, **Chang Li**, Jiantao Han📧
   <img src="images/posters/poster-jcesr.jpg"
        alt="JCESR Research Poster">
 </a>
+
+<div class="poster-caption">
+<strong>JCESR 2023 Annual Meeting</strong><br>
+Electrolyte & Interfacial Chemistry
+</div>
 :::
 
 ::: poster-card
@@ -183,6 +188,12 @@ Yangyang Huang, Xiang Li,, Jinsong Wang, Lin Miao, **Chang Li**, Jiantao Han📧
   <img src="images/posters/poster-imlb.jpg"
        alt="IMLB Research Poster">
 </a>
+
+<div class="poster-caption">
+<strong>IMLB 2024</strong><br>
+Multivalent Battery Electrochemistry
+</div>
+
 :::
 
 ::: poster-card

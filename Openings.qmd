@@ -17,7 +17,7 @@ title: "Openings"
 </a>
 
 <div class="poster-caption">
-<strong>JCESR Annual Meeting</strong><br>
+<strong>JCESR 2023 Annual Meeting</strong><br>
 Electrolyte & Interfacial Chemistry
 </div>
 
