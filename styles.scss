@@ -106,24 +106,20 @@ code {
 
 /* 标题样式 */
 h1 {
-  color: $theme-darkcoffee3;
+  color: #1F4E79;
   font-family: $font-pt;
   font-size: 40px;
 }
 
 h2 {
-  color: $theme-darkcoffee3;
+  color: #1F4E79;
   font-family: $font-pt;
   font-size: 30px;
 }
 
 h3, h4 {
-  color: $theme-mocha1;
+  color: #222222;
   font-family: $font-pt;
-}
-
-h4 {
-  color: $theme-darkgreen1;
 }
 
 /* 代码块和推送样式 */
@@ -221,7 +217,7 @@ h4 {
 .navbar {
   background-image: url("images/westlake.png");
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
 
   min-height: 340px;
@@ -384,4 +380,50 @@ h4 {
 
 .link-row p {
   margin: 0;
+}
+
+/* Improve navbar text visibility */
+.navbar-nav .nav-link {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+  font-size: 1.6rem;
+}
+
+/* Desktop navbar position */
+@media (min-width: 769px) {
+
+  .navbar .container-fluid {
+    position: relative;
+    min-height: 320px;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    bottom: 4px;
+    left: 72%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+}
+
+/* Chang Group logo on right side */
+#quarto-margin-sidebar::after {
+  content: "";
+  display: block;
+
+  width: 160px;
+  height: 115px;
+
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-image: url("images/site-logo.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#TOC a.active {
+  color: #0066cc !important;
+  border-left-color: #0066cc !important;
 }
