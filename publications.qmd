@@ -5,7 +5,7 @@ editor: visual
 
 ## Journal Publications
 
-†: equal contribution; 📧: corresponding author
+†: equal contribution; 📧: corresponding author; <span class="highly-cited-icon">🏆</span>: ESI highly cited paper
 
 ### 2027
 
@@ -17,7 +17,7 @@ editor: visual
 <a href="publications/BeforeJoiningWestlake/Eutectic-Zn-MnO2_NatEng2026.pdf" target="_blank"> <img src="publications/BeforeJoiningWestlake/Eutectic-Zn-MnO2_NatEng2026_cover.jpg" class="pub-cover"/> </a>
 
 ::: pub-text
-Jinghan Li†, **Chang Li†📧**, Bo Liu, Yuzhang Li and Linda F. Nazar📧 <br>  *Aqueous eutectic electrolytes suppress oxygen and hydrogen evolution for long-life Zn\|\|MnO<sub>2</sub> dual-electrode-free batteries* <br> **Nat. Energy** 2026, [DOI: 10.1038/s41560-025-01958-8](https://www.nature.com/articles/s41560-025-01958-8)
+Jinghan Li†, **Chang Li†📧**, Bo Liu, Yuzhang Li and Linda F. Nazar📧 <br>  *Aqueous eutectic electrolytes suppress oxygen and hydrogen evolution for long-life Zn\|\|MnO<sub>2</sub> dual-electrode-free batteries* <br> **Nat. Energy** 2026, [DOI: 10.1038/s41560-025-01958-8](https://www.nature.com/articles/s41560-025-01958-8) <span class="highly-cited-icon">🏆</span>  
 :::
 ::::
 
@@ -33,7 +33,7 @@ Jinghan Li†, **Chang Li†📧**, Bo Liu, Yuzhang Li and Linda F. Nazar📧 <b
 <a href="publications/BeforeJoiningWestlake/Bare-Mg-interface_Joule2025.pdf" target="_blank"> <img src="publications/BeforeJoiningWestlake/Bare-Mg-interface_Joule2025_cover.jpg" class="pub-cover"/> </a>
 
 ::: pub-text
-**Chang Li**, Rishabh D. Guha, Stephen D. House, J. David Bazak, Yue Yu, Laidong Zhou, Kevin Zavadi, Kristin A. Persson and Linda F. Nazar📧<br> *A dynamically bare metal interface enables reversible magnesium electrodeposition at 50 mAh cm<sup>-2</sup>* <br> **Joule** 2025, [DOI: 10.1016/j.joule.2024.11.007](https://doi.org/10.1016/j.joule.2024.11.007)
+ **Chang Li**, Rishabh D. Guha, Stephen D. House, J. David Bazak, Yue Yu, Laidong Zhou, Kevin Zavadi, Kristin A. Persson and Linda F. Nazar📧<br> *A dynamically bare metal interface enables reversible magnesium electrodeposition at 50 mAh cm<sup>-2</sup>* <br> **Joule** 2025, [DOI: 10.1016/j.joule.2024.11.007](https://doi.org/10.1016/j.joule.2024.11.007) <span class="highly-cited-icon">🏆</span> 
 :::
 ::::
 
@@ -65,7 +65,7 @@ Laidong Zhou, J. David Bazak, **Chang Li**, and Linda F.Nazar📧<br> *4 V Na So
 <a href="publications/BeforeJoiningWestlake/Hybrid-eutectic-electrolyte-anodefree_NatCommun2023.pdf" target="_blank"> <img src="publications/BeforeJoiningWestlake/Hybrid-eutectic-electrolyte-anodefree_NatCommun2023_cover.jpg" class="pub-cover"/> </a>
 
 ::: pub-text
-**Chang Li**, Ryan Kingsbury, Arashdeep Singh Thind, Abhinandan Shyamsunder, Timothy T. Fister, Robert F. Klie, Kristin A. Persson📧 and Linda F. Nazar📧<br> *Enabling selective zinc-ion intercalation by a eutectic electrolyte for practical anodeless zinc batteries* <br> **Nat. Commun.** 2023, [DOI: 10.1038/s41467-023-38460-2](https://doi.org/10.1038/s41467-023-38460-2)
+ **Chang Li**, Ryan Kingsbury, Arashdeep Singh Thind, Abhinandan Shyamsunder, Timothy T. Fister, Robert F. Klie, Kristin A. Persson📧 and Linda F. Nazar📧<br> *Enabling selective zinc-ion intercalation by a eutectic electrolyte for practical anodeless zinc batteries* <br> **Nat. Commun.** 2023, [DOI: 10.1038/s41467-023-38460-2](https://doi.org/10.1038/s41467-023-38460-2) <span class="highly-cited-icon">🏆</span> 
 :::
 ::::
 
@@ -113,7 +113,7 @@ Lauren E. Blanc, Yunyeong Choi, Abhinandan Shyamsunder, Baris Key, Saul H. Lapid
 <a href="publications/BeforeJoiningWestlake/DOTF-additive_Joule2022.pdf" target="_blank"> <img src="publications/BeforeJoiningWestlake/DOTF-additive_Joule2022_cover.jpg" class="pub-cover"/> </a>
 
 ::: pub-text
-**Chang Li**, Abhinandan Shyamsunder,cAlexis Grace Hoane, Daniel M. Long, Chun Yuen Kwok, Paul G. Kotula, Kevin R. Zavadil, Andrew A. Gewirth📧 and Linda F. Nazar📧<br> *Highly reversible Zn anode with a practical areal capacity enabled by a sustainable electrolyte and superacid interfacial chemistry* <br> **Joule** 2022, [DOI: 10.1016/j.joule.2022.04.017](https://doi.org/10.1016/j.joule.2022.04.017)
+ **Chang Li**, Abhinandan Shyamsunder,cAlexis Grace Hoane, Daniel M. Long, Chun Yuen Kwok, Paul G. Kotula, Kevin R. Zavadil, Andrew A. Gewirth📧 and Linda F. Nazar📧<br> *Highly reversible Zn anode with a practical areal capacity enabled by a sustainable electrolyte and superacid interfacial chemistry* <br> **Joule** 2022, [DOI: 10.1016/j.joule.2022.04.017](https://doi.org/10.1016/j.joule.2022.04.017) <span class="highly-cited-icon">🏆</span> 
 :::
 ::::
 
