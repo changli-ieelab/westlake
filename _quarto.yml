@@ -3,6 +3,7 @@ project:
   output-dir: docs
   resources:
     - images/westlake-logo.png
+    - images/posters/**
 
 website:
   page-navigation: true

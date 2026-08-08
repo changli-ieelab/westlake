@@ -166,3 +166,30 @@ Yangyang Huang, Xiang Li,, Jinsong Wang, Lin Miao, **Chang Li**, Jiantao Han📧
 <strong> Chang Li </strong><br> *Electrode/Electrolyte Interface Control for Multivalent-Ion Batteries with High Stability and Reversibility* <br> **Materials Research Society (MRS) Fall Meeting 2023**, Boston, Nov. 27th, 2023
 :::
 ::::
+
+## Poster Presentations
+
+:::: poster-gallery
+
+::: poster-card
+<a href="images/posters/poster-jcesr.pdf" target="_blank">
+  <img src="images/posters/poster-jcesr.jpg"
+       alt="JCESR Research Poster">
+</a>
+:::
+
+::: poster-card
+<a href="images/posters/poster-imlb.pdf" target="_blank">
+  <img src="images/posters/poster-imlb.jpg"
+       alt="IMLB Research Poster">
+</a>
+:::
+
+::: poster-card
+<a href="images/posters/poster-third.pdf" target="_blank">
+  <img src="images/posters/poster-third.jpg"
+       alt="Research Poster">
+</a>
+:::
+
+::::
