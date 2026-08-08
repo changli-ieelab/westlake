@@ -162,13 +162,28 @@ h3, h4 {
   display: grid;
   grid-template-columns: 220px 1fr;
   gap: 2rem;
-  align-items: center;
+  align-items: start;
+}
+
+.team-background h3 {
+  margin-top: 0 !important;
 }
 
 .team-info {
   display: grid;
   grid-template-rows: auto auto;
   gap: 1rem;
+
+  /* 关键：不要让两行撑满整个高度 */
+  align-content: start;
+}
+
+.team-background ul {
+  margin-bottom: 0;
+}
+
+.team-links h3 {
+  margin-top: 0;
 }
 
 .team-photo img {
@@ -401,23 +416,28 @@ h3, h4 {
   }
 }
 
-/* Chang Group logo on right side */
-#quarto-margin-sidebar::after {
-  content: "";
-  display: block;
-
-  width: 160px;
-  height: 115px;
-
+/* Sidebar logos */
+.sidebar-logos {
   margin-top: 25px;
-  margin-left: auto;
-  margin-right: auto;
-
-  background-image: url("images/site-logo.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  text-align: center;
 }
+
+.sidebar-logos img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+
+.sidebar-logos .chang-logo {
+  width: 150px;
+  margin: 0 auto 28px auto;
+}
+
+.sidebar-logos .westlake-logo {
+  width: 160px;
+  margin: 0 auto;
+}
+
 
 #TOC a.active {
   color: #0066cc !important;
@@ -482,3 +502,25 @@ h3, h4 {
 body.nav-fixed {
   padding-top: 0 !important;
 }
+
+/* Back to top link */
+.back-to-top {
+  display: block;
+  margin-top: 1.2rem;
+  padding-top: 0.8rem;
+
+  border-top: 1px solid #dddddd;
+
+  color: #4c4c4c !important;
+  font-family: $font-family-sans-serif;
+  font-size: 0.78rem !important;
+  font-weight: 400 !important;
+  line-height: 1.4;
+
+  text-decoration: none !important;
+}
+
+.back-to-top:hover {
+  color: #1F4E79 !important;
+}
+

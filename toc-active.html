@@ -64,6 +64,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", updateTOC);
 
-  updateTOC();
+  updateTOC();  
+
+    // Add "Back to top" link below TOC
+  const toc = document.querySelector("#TOC");
+
+  if (toc) {
+    const backToTop = document.createElement("a");
+
+    backToTop.href = "#";
+    backToTop.className = "back-to-top";
+    backToTop.innerHTML = "Back to top ↑";
+
+    backToTop.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
+    toc.appendChild(backToTop);
+  }
+  
+  // Add sidebar logos
+const marginSidebar = document.querySelector("#quarto-margin-sidebar");
+
+if (marginSidebar) {
+  const logoBox = document.createElement("div");
+  logoBox.className = "sidebar-logos";
+
+  logoBox.innerHTML = `
+    <img class="chang-logo" src="images/site-logo.jpg" alt="Chang Group">
+    <img class="westlake-logo" src="images/westlake-logo.png" alt="Westlake University">
+  `;
+
+  marginSidebar.appendChild(logoBox);
+}
 });
 </script>

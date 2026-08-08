@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - images/westlake-logo.png
 
 website:
   page-navigation: true
