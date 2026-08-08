@@ -240,17 +240,29 @@ document.addEventListener("DOMContentLoaded", function () {
     e.stopPropagation();
     e.stopImmediatePropagation();
 
-    const targetY =
-      target.getBoundingClientRect().top +
-      window.scrollY -
-      window.innerHeight * 0.30;
+    
+    function scrollToTarget() {
+      const targetY =
+        target.getBoundingClientRect().top +
+        window.scrollY -
+        window.innerHeight * 0.30;
 
-    window.scrollTo({
-      top: targetY,
-      behavior: "smooth"
-    });
+      window.scrollTo({
+        top: targetY,
+        behavior: "auto"
+  });
+}
 
-    history.replaceState(null, "", href);
+// 第一次滚动
+scrollToTarget();
+
+// 页面布局稳定后自动校正一次
+setTimeout(scrollToTarget, 400);
+
+// 再保险一次，解决线上图片/字体加载较慢的情况
+setTimeout(scrollToTarget, 900);
+
+history.replaceState(null, "", href);
 
   }, true);
 
