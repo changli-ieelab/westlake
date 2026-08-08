@@ -196,11 +196,5 @@ Multivalent Battery Electrochemistry
 
 :::
 
-::: poster-card
-<a href="images/posters/poster-third.pdf" target="_blank">
-  <img src="images/posters/poster-third.jpg"
-       alt="Research Poster">
-</a>
-:::
 
 ::::
