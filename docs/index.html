@@ -43,7 +43,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-a9c94084e156453ce75ecc8ff7b2041c.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4f9ffa523a1116d2e04b8167ca8f42f7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8b5d55406d50e0d22f18ea993895712a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -180,123 +180,156 @@ The Interfacial Electrochemical Engineering Lab officially launches at Westlake 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  const tocLinks = document.querySelectorAll("#TOC a");
-  const sections = [];
+  const toc = document.querySelector("#TOC");
+  if (!toc) return;
 
-  tocLinks.forEach(link => {
-    const href = link.getAttribute("href");
+  /*
+   * Replace Quarto TOC links with clean clones.
+   * This removes Quarto's original click handlers.
+   */
+  const oldLinks = Array.from(
+    toc.querySelectorAll('a[href^="#"]')
+  );
 
-    if (href && href.startsWith("#")) {
-      const section = document.querySelector(href);
-
-      if (section) {
-        sections.push({
-          link: link,
-          section: section
-        });
-      }
-    }
+  oldLinks.forEach(oldLink => {
+    const newLink = oldLink.cloneNode(true);
+    oldLink.replaceWith(newLink);
   });
 
 
-  // Custom TOC click positioning
-  document.addEventListener("click", function (e) {
+  // Get the new clean links
+  const tocLinks = Array.from(
+    toc.querySelectorAll('a[href^="#"]')
+  );
 
-    const link = e.target.closest('#TOC a[href^="#"]');
+  const sections = [];
 
-    if (!link) return;
+
+  tocLinks.forEach(link => {
 
     const href = link.getAttribute("href");
+
+    if (!href) return;
+
     const target = document.querySelector(href);
 
     if (!target) return;
 
-    // Prevent Quarto's own TOC scrolling
-    e.preventDefault();
-    e.stopPropagation();
-    e.stopImmediatePropagation();
 
-    
-    function scrollToTarget() {
+    sections.push({
+      link: link,
+      section: target
+    });
+
+
+    /*
+     * Our own TOC click behavior
+     */
+    link.addEventListener("click", function (e) {
+
+      e.preventDefault();
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+
       const targetY =
         target.getBoundingClientRect().top +
         window.scrollY -
-        window.innerHeight * 0.30;
+        80;
 
       window.scrollTo({
         top: targetY,
-        behavior: "auto"
+        behavior: "smooth"
+      });
+
+      history.replaceState(null, "", href);
+
+    });
+
   });
-}
-
-// 第一次滚动
-scrollToTarget();
-
-// 页面布局稳定后自动校正一次
-setTimeout(scrollToTarget, 400);
-
-// 再保险一次，解决线上图片/字体加载较慢的情况
-setTimeout(scrollToTarget, 900);
-
-history.replaceState(null, "", href);
-
-  }, true);
 
 
+  /*
+   * Active TOC highlighting
+   */
   function updateTOC() {
+
     let current = null;
 
     sections.forEach(item => {
-      const rect = item.section.getBoundingClientRect();
+
+      const rect =
+        item.section.getBoundingClientRect();
 
       if (rect.top <= 250) {
         current = item;
       }
+
     });
+
 
     tocLinks.forEach(link => {
       link.classList.remove("active");
     });
 
+
     if (current) {
       current.link.classList.add("active");
     }
+
   }
 
 
-  window.addEventListener("scroll", updateTOC);
+  window.addEventListener(
+    "scroll",
+    updateTOC,
+    { passive: true }
+  );
+
   updateTOC();
 
 
-  // Back to top
-  const toc = document.querySelector("#TOC");
+  /*
+   * Back to top
+   */
+  const backToTop =
+    document.createElement("a");
 
-  if (toc) {
-    const backToTop = document.createElement("a");
+  backToTop.href = "#";
+  backToTop.className = "back-to-top";
+  backToTop.innerHTML = "Back to top ↑";
 
-    backToTop.href = "#";
-    backToTop.className = "back-to-top";
-    backToTop.innerHTML = "Back to top ↑";
+  backToTop.addEventListener(
+    "click",
+    function (e) {
 
-    backToTop.addEventListener("click", function (e) {
       e.preventDefault();
 
       window.scrollTo({
         top: 0,
         behavior: "smooth"
       });
-    });
 
-    toc.appendChild(backToTop);
-  }
+    }
+  );
+
+  toc.appendChild(backToTop);
 
 
-  // Sidebar logos
-  const marginSidebar = document.querySelector("#quarto-margin-sidebar");
+  /*
+   * Sidebar logos
+   */
+  const marginSidebar =
+    document.querySelector(
+      "#quarto-margin-sidebar"
+    );
 
   if (marginSidebar) {
-    const logoBox = document.createElement("div");
-    logoBox.className = "sidebar-logos";
+
+    const logoBox =
+      document.createElement("div");
+
+    logoBox.className =
+      "sidebar-logos";
 
     logoBox.innerHTML = `
       <img class="chang-logo"
@@ -308,7 +341,10 @@ history.replaceState(null, "", href);
            alt="Westlake University">
     `;
 
-    marginSidebar.appendChild(logoBox);
+    marginSidebar.appendChild(
+      logoBox
+    );
+
   }
 
 });

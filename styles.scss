@@ -697,3 +697,7 @@ body.nav-fixed {
   align-self: start !important;
   height: fit-content !important;
 }
+
+html {
+  scroll-behavior: auto !important;
+}
