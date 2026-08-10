@@ -49,7 +49,7 @@ toc: true
 :::::: team-grid
 
 ::: team-photo
-![](images/Team/panlili.png){width="220px"}
+![](images/Team/Lili_Pan.jpg){width="220px"}
 :::
 
 ::::: team-info
@@ -59,8 +59,9 @@ toc: true
 ### Lili Pan
 
 - Joined: Aug-2026
-- Education: MS in Chemical Engineering (2020, Tianjing University)
-- About Me: ...
+- Education: Master of Industrial Catalysis (2020，Tianjin University)
+- Research Interests: Water electrolysis
+- About Me: like running and swimming
 
 :::
 
