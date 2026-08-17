@@ -738,21 +738,3 @@ html {
   position: relative;
   top: -0.12em;
 }
-
-.orcid-icon {
-  width: 16px !important;
-  height: 16px !important;
-  max-width: 16px !important;
-  object-fit: contain;
-  vertical-align: middle;
-}
-
-.team-links .link-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1rem;
-}
-
-.team-links .link-row span {
-  white-space: nowrap;
-}
