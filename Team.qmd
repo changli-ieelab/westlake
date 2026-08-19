@@ -17,7 +17,7 @@ toc: true
 ### Chang Li
 
 - **2027 – Present**: Assistant Professor, Westlake University
-- **2024 – 2027**: Postdoc, Lawrence Berkeley National Laboratory
+- **2024 – 2026**: Postdoc, Lawrence Berkeley National Laboratory
 - **2019 – 2024**: PhD in Chemistry, University of Waterloo
 - **2015 – 2019**: Bachelor in Materials Science and Engineering, Huazhong University of Science and Technology
 

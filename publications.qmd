@@ -25,7 +25,7 @@ Jinghan Li†, **Chang Li†📧**, Bo Liu, Yuzhang Li and Linda F. Nazar📧 <b
 <a href="publications/BeforeJoiningWestlake/Steric-effect-Mg-electrolytes-JACS-2026.pdf" target="_blank"> <img src="publications/BeforeJoiningWestlake/Steric-effect-Mg-electrolytes-JACS-2026_cover.jpg" class="pub-cover"/> </a>
 
 ::: pub-text
-**Chang Li**, Rohith Srinivaas Mohanakrishnan, Jinghan Li, Rishabh D. Guha, Kristin A. Persson and Linda F. Nazar📧<br> *Unraveling the Steric Effect of Trialkyl Phosphates on the Solvation Sheath and Solid Electrolyte Interphase in High-Efficiency Magnesium Electrolytes* <br> **J. Am. Chem. Soc.** 2026, [DOI: 10.1021/jacs.5c14645](https://pubs.acs.org/doi/10.1021/jacs.5c14645)
+**Chang Li**, Rohith Srinivaas Mohanakrishnan, Jinghan Li, Rishabh D. Guha, Kristin A. Persson and Linda F. Nazar📧<br> *Unraveling the Steric Effect of Trialkyl Phosphates on the Solvation Sheath and Solid Electrolyte Interphase in High-Efficiency Magnesium Electrolytes* <br> **J. Am. Chem. Soc.** 2026, [DOI: 10.1021/jacs.5c14645](https://pubs.acs.org/doi/10.1021/jacs.5c14645)<span class="highly-cited-icon">🏆</span>  
 :::
 ::::
 
