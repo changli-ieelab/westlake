@@ -30,7 +30,7 @@ website:
       - text: "Research"
         href: Research.qmd
       - text: "Publications"
-        href: Publications.qmd
+        href: publications.qmd
       - text: "Openings"
         href: Openings.qmd
 
