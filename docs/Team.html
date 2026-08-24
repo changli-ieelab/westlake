@@ -302,57 +302,98 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!toc) return;
 
   /*
-   * Replace Quarto TOC links with clean clones.
-   * This removes Quarto's original click handlers.
+   * TOC links
    */
-  const oldLinks = Array.from(
-    toc.querySelectorAll('a[href^="#"]')
-  );
-
-  oldLinks.forEach(oldLink => {
-    const newLink = oldLink.cloneNode(true);
-    oldLink.replaceWith(newLink);
-  });
-
-
-  // Get the new clean links
   const tocLinks = Array.from(
     toc.querySelectorAll('a[href^="#"]')
   );
 
-  const sections = [];
+  /*
+   * Handle TOC clicks ourselves.
+   *
+   * Capture phase is important:
+   * it runs before Quarto's own click handlers,
+   * avoiding conflicts between the two.
+   */
+  toc.addEventListener(
+    "click",
+    function (e) {
 
+      const link = e.target.closest('a[href^="#"]');
 
-  tocLinks.forEach(link => {
-    const href = link.getAttribute("href");
+      if (!link || !toc.contains(link)) return;
 
-    if (!href || !href.startsWith("#")) return;
+      const href = link.getAttribute("href");
 
-    const target = document.querySelector(href);
+      if (!href || href === "#") return;
 
-    if (!target) return;
+      const id = decodeURIComponent(
+        href.substring(1)
+      );
 
-    link.addEventListener("click", function (e) {
+      const target =
+        document.getElementById(id);
+
+      if (!target) return;
+
       e.preventDefault();
+      e.stopPropagation();
 
+      /*
+       * Position the target below the navbar.
+       */
       const targetY =
         target.getBoundingClientRect().top +
         window.scrollY -
         80;
 
       window.scrollTo({
-        top: targetY,
+        top: Math.max(0, targetY),
         behavior: "auto"
       });
 
-      history.replaceState(null, "", href);
-    });
-});
+      /*
+       * Update URL without triggering another scroll.
+       */
+      history.replaceState(
+        null,
+        "",
+        href
+      );
+
+    },
+    true
+  );
 
 
   /*
    * Active TOC highlighting
    */
+  const sections = [];
+
+  tocLinks.forEach(link => {
+
+    const href = link.getAttribute("href");
+
+    if (!href || href === "#") return;
+
+    const id = decodeURIComponent(
+      href.substring(1)
+    );
+
+    const section =
+      document.getElementById(id);
+
+    if (!section) return;
+
+    sections.push({
+      link: link,
+      section: section
+    });
+
+  });
+
+
   function updateTOC() {
 
     let current = null;
@@ -368,11 +409,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-
     tocLinks.forEach(link => {
       link.classList.remove("active");
     });
-
 
     if (current) {
       current.link.classList.add("active");
@@ -410,6 +449,12 @@ document.addEventListener("DOMContentLoaded", function () {
         top: 0,
         behavior: "smooth"
       });
+
+      history.replaceState(
+        null,
+        "",
+        window.location.pathname
+      );
 
     }
   );
