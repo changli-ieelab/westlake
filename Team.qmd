@@ -175,7 +175,7 @@ toc: true
 ::::: team-info
 
 ::: team-background
-### Ziao Wang
+### Ziao 
 - **Joined**: Nov 2026 (RA)
 - **Education**: 
   - Ph.D. student (2024-2025, University of California, Riverside) 
