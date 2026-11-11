@@ -202,7 +202,257 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+  /*
 
+   * TOC links
+
+   */
+
+  const tocLinks = Array.from(
+
+    toc.querySelectorAll('a[href^="#"]')
+
+  );
+
+
+
+  /*
+
+   * Handle TOC clicks ourselves.
+
+   *
+
+   * Capture phase is important:
+
+   * it runs before Quarto's own click handlers,
+
+   * avoiding conflicts between the two.
+
+   */
+
+  toc.addEventListener(
+
+    "click",
+
+    function (e) {
+
+
+
+      const link = e.target.closest('a[href^="#"]');
+
+
+
+      if (!link || !toc.contains(link)) return;
+
+
+
+      const href = link.getAttribute("href");
+
+
+
+      if (!href || href === "#") return;
+
+
+
+      const id = decodeURIComponent(
+
+        href.substring(1)
+
+      );
+
+
+
+      const target =
+
+        document.getElementById(id);
+
+
+
+      if (!target) return;
+
+
+
+      e.preventDefault();
+
+      e.stopPropagation();
+
+
+
+      /*
+
+       * Position the target below the navbar.
+
+       */
+
+      const targetY =
+
+        target.getBoundingClientRect().top +
+
+        window.scrollY -
+
+        80;
+
+
+
+      window.scrollTo({
+
+        top: Math.max(0, targetY),
+
+        behavior: "auto"
+
+      });
+
+
+
+      /*
+
+       * Update URL without triggering another scroll.
+
+       */
+
+      history.replaceState(
+
+        null,
+
+        "",
+
+        href
+
+      );
+
+
+
+    },
+
+    true
+
+  );
+
+
+
+
+
+  /*
+
+   * Active TOC highlighting
+
+   */
+
+  const sections = [];
+
+
+
+  tocLinks.forEach(link => {
+
+
+
+    const href = link.getAttribute("href");
+
+
+
+    if (!href || href === "#") return;
+
+
+
+    const id = decodeURIComponent(
+
+      href.substring(1)
+
+    );
+
+
+
+    const section =
+
+      document.getElementById(id);
+
+
+
+    if (!section) return;
+
+
+
+    sections.push({
+
+      link: link,
+
+      section: section
+
+    });
+
+
+
+  });
+
+
+
+
+
+  function updateTOC() {
+
+
+
+    let current = null;
+
+
+
+    sections.forEach(item => {
+
+
+
+      const rect =
+
+        item.section.getBoundingClientRect();
+
+
+
+      if (rect.top <= 250) {
+
+        current = item;
+
+      }
+
+
+
+    });
+
+
+
+    tocLinks.forEach(link => {
+
+      link.classList.remove("active");
+
+    });
+
+
+
+    if (current) {
+
+      current.link.classList.add("active");
+
+    }
+
+
+
+  }
+
+
+
+
+
+  window.addEventListener(
+
+    "scroll",
+
+    updateTOC,
+
+    { passive: true }
+
+  );
+
+
+
+  updateTOC();
 
 
 
