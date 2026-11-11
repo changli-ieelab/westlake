@@ -169,7 +169,7 @@ toc: true
 :::::: team-grid
 
 ::: team-photo
-![](images/Team/PhDstudents.png){width="220px"}
+![](images/Team/Ziao_Wang.jpg){width="220px"}
 :::
 
 ::::: team-info
@@ -189,7 +189,7 @@ toc: true
 ::: team-links
 ### Links
 ::: link-row
-<span>📧 [xxx@westlake.edu.cn](mailto:xxx@westlake.edu.cn){.email}</span>
+<span>📧 [wangziao@westlake.edu.cn](mailto:wangziao@westlake.edu.cn){.email}</span>
 :::
 :::
 
