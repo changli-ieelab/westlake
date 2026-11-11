@@ -747,3 +747,7 @@ html {
   padding-left: 0;
   margin-left: 0;
 }
+/* Prevent fixed navbar from covering section anchors */
+section[id] {
+  scroll-margin-top: 6rem;
+}
